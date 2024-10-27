@@ -1,2 +1,2 @@
 # uploader
-https://i.kyy.gay
+https://i.kys.gay
