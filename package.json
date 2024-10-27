@@ -1,0 +1,19 @@
+{
+  "name": "uploader",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon -L src/app.js",
+    "prod": "pm2 --name uploader start src/app.js",
+    "stop": "pm2 stop uploader",
+    "restart": "pm2 restart uploader"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.1",
+    "hono": "^4.6.3",
+    "nanoid": "^5.0.7",
+    "sqlite3": "^5.1.7"
+  }
+}
