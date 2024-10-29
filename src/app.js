@@ -48,6 +48,20 @@ if (!fs.existsSync(uploadsDir)) {
 
 const allowedTypes = ['image/png', 'image/jpg', 'image/jpeg', 'image/gif']
 
+app.get('', async (c) => {
+  return c.json({
+    "Version": "14.1.0",
+    "DestinationType": "FileUploader",
+    "RequestMethod": "POST",
+    "RequestURL": "https://i.kys.gay/upload",
+    "Body": "MultipartFormData",
+    "FileFormName": "file",
+    "URL": "https://i.kys.gay/{json:lookupKey}",
+    "DeletionURL": "https://i.kys.gay/delete/{json:deletionKey}",
+    "ErrorMessage": "{json:error}"
+  }, 200)
+})
+
 app.get('/:lookupKey', async (c) => {
   const lookupKey = c.req.param('lookupKey')
   if (!lookupKey) {
