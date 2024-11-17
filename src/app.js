@@ -6,6 +6,7 @@ import path from 'path'
 import sqlite3 from 'sqlite3';
 import { Readable } from 'node:stream';
 import { promisify } from 'util';
+import { cors } from 'hono/cors'
 
 const dbPath = './storage/database.db';
 const dbDir = path.dirname(dbPath);
@@ -41,6 +42,7 @@ async function createTable() {
 }
 
 const app = new Hono()
+app.use('/*', cors())
 const uploadsDir = './storage/uploads';
 if (!fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir, { recursive: true });
