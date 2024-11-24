@@ -1,14 +1,13 @@
 {
-  "name": "uploader",
+  "name": "i",
   "version": "0.0.1",
-  "description": "",
   "main": "src/app.js",
   "type": "module",
   "scripts": {
     "dev": "nodemon -L src/app.js",
-    "prod": "pm2 --name uploader start src/app.js",
-    "stop": "pm2 stop uploader",
-    "restart": "pm2 restart uploader"
+    "prod": "pm2 --name i start src/app.js",
+    "stop": "pm2 stop i",
+    "restart": "pm2 restart i"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.1",

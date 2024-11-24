@@ -1,2 +1,2 @@
-# uploader
+# i
 https://i.kys.gay
